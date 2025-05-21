@@ -1,103 +1,112 @@
 import Image from "next/image";
+import { MorphingText } from "@/components/magicui/morphing-text"; // Named import
+import { ReNavbar } from "@/components/magicui/resizable-navbar"; // Named import
+import { Vortex } from "@/components/magicui/vortex"; // Named import
+import { BackgroundBeams } from "@/components/magicui/background-beams";
+import { Clock } from "lucide-react";
+import { HyperText } from "@/components/magicui/hypertext";
+import Newsroom from "@/components/magicui/newsroom";
+import Footer from "@/components/magicui/footer";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <ReNavbar />
+    
+      <div className="min-h-screen w-full bg-neutral-950 relative flex flex-col items-center justify-start antialiased">
+        <div className="max-w-2xl mx-auto p-4">
+          <h3 className="relative z-10 text-3xl md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-sans font-bold">
+           GQICS
+          </h3>
+          <br></br>
+         <h1 className="relative z-10 text-2xl md:text-3xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-sans font-bold">
+           General-Quantum-Implementing-Continuem-Systems
+          </h1>
+        
+          <p></p>
+          <p className="text-neutral-500 max-w-lg mx-auto my-2 text-sm text-center relative z-10 border-neutral-500 border-2 rounded-2xl px-5 py-5">
+            we’re pioneering the next generation of missile technology with the development of GQICS—General Quantum Implementing Continuum Systems. This groundbreaking project is set to redefine modern defense systems by combining quantum mechanics with advanced systems integration. By embedding quantum computing, stealth capabilities, and adaptive intelligence into our missiles, we’re building weapons that evolve in real-time, are nearly invisible to detection, and adapt to shifting battlefield conditions. GQICS is designed to ensure unmatched precision, speed, and security—creating a defense platform that is as dynamic and intelligent as the threats it faces.
+          </p>
+          <br></br>
+          <div className="flex gap-x-4 justify-center">
+  <HyperText
+    
+    className="relative z-20 text-neutral-500 text-lg border-2 border-white inline-flex px-5 py-1 justify-center rounded-2xl"
+  >
+    Email-Us
+  </HyperText>
+
+  <HyperText
+     // or another URL
+    className="relative z-20 text-neutral-500 text-lg border-2 border-white inline-flex px-5 py-1 justify-center rounded-2xl"
+  >
+    Schedule-A-Call
+  </HyperText>
+</div>
+<div></div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <br>
+        </br>
+
+
+        <div>
+         <h1 className="relative z-10 text-1xl md:text-2xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-sans font-bold border-1 rounded-4xl px-8">
+           --About Our Project--
+          </h1>
+          </div>
+          <br>
+          </br>
+          <div className="text-neutral-500 max-w-2xl mx-auto my-4 text-sm relative z-10 space-y-3">
+  
+  <ul className="list-disc list-inside space-y-5 px-7 text-center space-x ">
+    <li>
+      <strong>GQICS (General Quantum Implementing Continuum Systems)</strong> is our flagship defense technology project focused on creating next-generation, AI-driven missile systems with quantum-enhanced decision making.
+    </li>
+    <li>
+      The system uses <strong>quantum computing frameworks</strong> for real-time threat analysis, signal processing, and autonomous mission adaptation—far surpassing traditional digital logic systems in complexity and speed.
+    </li>
+    <li>
+      Leveraging <strong>deep learning models</strong>, GQICS continuously learns from operational data to improve target prediction accuracy, distinguish between decoys and real threats, and adapt to evolving combat environments.
+    </li>
+    <li>
+      Equipped with an <strong>autonomous missile detection and evasion system</strong>, GQICS can detect incoming threats, re-map its trajectory, and deploy countermeasures using onboard AI and sensor fusion.
+    </li>
+    <li>
+      Features a <strong>modular payload architecture</strong> that allows the system to carry and deploy a variety of warheads or electronic warfare modules based on mission objectives.
+    </li>
+    <li>
+      Integrated <strong>stealth technology</strong> using radar-absorbent materials and dynamic electromagnetic profile shifting for minimal detectability across radar and thermal bands.
+    </li>
+    <li>
+      Supports <strong>continuum system intelligence</strong>—a real-time feedback and control loop that adapts flight, target, and response behaviors using multi-sensor inputs and battlefield data streams.
+    </li>
+    <li>
+      Developed using a hybrid tech stack: <strong>TensorFlow + PyTorch for deep learning</strong>, <strong>Qiskit for quantum modeling</strong>, and <strong>Rust/C++</strong> for low-latency onboard control systems.
+    </li>
+    <li>
+      Built with future scalability in mind, GQICS is designed to interface with next-gen defense networks, satellite guidance systems, and real-time command infrastructures.
+    </li>
+  </ul>
+
+
+         
+        </div>
+
+
+
+<Newsroom />
+
+
+<Footer />
+
+
+
+        <BackgroundBeams />
+      </div>
+
+     
+      <br />
+    </>
   );
 }
