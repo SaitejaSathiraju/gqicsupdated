@@ -1,7 +1,5 @@
-import Image from "next/image";
-import { MorphingText } from "@/components/magicui/morphing-text"; // Named import
-import { ReNavbar } from "@/components/magicui/resizable-navbar"; // Named import
-import { Vortex } from "@/components/magicui/vortex"; // Named import
+import { ReNavbar } from "@/components/magicui/resizable-navbar"; 
+import { Vortex } from "@/components/magicui/vortex"; 
 import { BackgroundBeams } from "@/components/magicui/background-beams";
 import { Clock } from "lucide-react";
 import { HyperText } from "@/components/magicui/hypertext";
