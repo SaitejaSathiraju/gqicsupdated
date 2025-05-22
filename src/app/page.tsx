@@ -1,5 +1,5 @@
-import { ReNavbar } from "@/components/magicui/resizable-navbar"; 
-import { BackgroundBeams } from "@/components/magicui/background-beams";
+import { ReNavbar } from "@/components/magicui/resizable-navbar"; //hello world
+import { BackgroundBeams } from "@/components/magicui/background-beams"; //helloworld
 
 import { HyperText } from "@/components/magicui/hypertext";
 import Newsroom from "@/components/magicui/newsroom";
