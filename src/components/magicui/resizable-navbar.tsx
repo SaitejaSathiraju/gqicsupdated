@@ -1,5 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
+import Link from 'next/link';
 import { IconMenu2, IconX } from "@tabler/icons-react";
 import {
   motion,
@@ -10,7 +11,7 @@ import {
 
 import React, { useRef, useState } from "react";
 
-// Interfaces (you can keep these as-is if used elsewhere)
+// Interfaces
 interface NavItemsProps {
   items: {
     name: string;
@@ -20,12 +21,12 @@ interface NavItemsProps {
   onItemClick?: () => void;
 }
 
-// Replace this with your actual items
+// Navigation items
 const navItems = [
   { name: "Home", link: "/" },
   { name: "About", link: "/about" },
   { name: "Contact", link: "/contact" },
-   { name: "services", link: "/services" },
+  { name: "services", link: "/services" },
   { name: "products", link: "/products" },
   { name: "newsletters", link: "/newsletters" },
 ];
@@ -102,14 +103,14 @@ export const ReNavbar = ({ className }: { className?: string }) => {
               className="mt-4 flex flex-col items-start space-y-4 bg-white dark:bg-neutral-950 rounded-lg p-4 shadow-lg"
             >
               {navItems.map((item, idx) => (
-                <a
+                <Link
                   key={`mobile-nav-${idx}`}
                   href={item.link}
                   className="text-black dark:text-white text-sm font-medium"
                   onClick={() => setMenuOpen(false)}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
               <NavbarButton href="/get-started" className="mt-2 w-full">
                 Get Started
@@ -122,18 +123,16 @@ export const ReNavbar = ({ className }: { className?: string }) => {
   );
 };
 
-// Remaining components below
-
 export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
-     <div
+    <div
       onMouseLeave={() => setHovered(null)}
       className={cn("flex space-x-2 text-sm font-medium", className)}
     >
       {items.map((item, idx) => (
-        <a
+        <Link
           key={`link-${idx}`}
           href={item.link}
           onMouseEnter={() => setHovered(idx)}
@@ -150,7 +149,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
             />
           )}
           <span className="relative z-20">{item.name}</span>
-        </a>
+        </Link>
       ))}
     </div>
   );
@@ -158,12 +157,12 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
 
 export const NavbarLogo = () => {
   return (
-    <a
+    <Link
       href="/"
       className="flex items-center space-x-2 text-3xl font-bold text-black dark:text-white"
     >
       <span>GQICS</span>
-    </a>
+    </Link>
   );
 };
 
